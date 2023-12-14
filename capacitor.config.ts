@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'interigo',
+  appId: 'io.ionic.intergiro',
+  appName: 'intergiro',
   webDir: 'dist',
   server: {
     androidScheme: 'https'
