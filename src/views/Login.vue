@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { IonPage, IonButton, IonText, IonRow, IonCol, IonInput } from '@ionic/vue'
-import { IconLocationShare, IconFaceId, IconEyeOff } from '@tabler/icons-vue'
+import { IconFaceId, IconEyeOff } from '@tabler/icons-vue'
 import { useIonRouter } from '@ionic/vue'
 
 const ionRouter = useIonRouter()
@@ -9,11 +9,11 @@ const ionRouter = useIonRouter()
 <template>
   <ion-page class="p-4">
     <ion-col class="flex flex-row justify-center gap-2 text-4xl font-bold items-end">
-      <icon-location-share :size="36" />
-      <ion-text>integiro</ion-text>
+      <img src="@/assets/imgs/logo.jpg" class="w-12 h-12" />
+      <ion-text class="mb-2">integiro</ion-text>
     </ion-col>
     <ion-row class="justify-center text-gray-400">antomarkop@gmail.com</ion-row>
-    <ion-row class="flex-row mt-32 mb-16 gap-3 items-center">
+    <ion-row class="flex-row mt-24 mb-16 gap-3 items-center">
       <ion-input class="flex-1 rounded-md bg-gray-100 custom align-middle">
         <icon-eye-off class="absolute right-4 top-5 z-10 text-gray-400 active:opacity-40" />
       </ion-input>

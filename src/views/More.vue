@@ -13,7 +13,7 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header collapse="condense" class="flex flex-col gap-3 py-3" :class="isIOS()?'status-bar': ''">
+    <ion-header collapse="condense" class="flex flex-col gap-3 py-2" :class="isIOS()?'status-bar': ''">
       <ion-toolbar>
         <ion-title class="px-8 text-start text-2xl">More</ion-title>
       </ion-toolbar>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { IonPage, IonContent, IonHeader, IonRow, IonCol, IonButton, IonInput, IonAvatar } from '@ionic/vue'
-import { IconX, IconPlus, IconSearch, IconPointFilled } from '@tabler/icons-vue';
+import { IconX, IconPlus, IconSearch } from '@tabler/icons-vue';
 
 const recent = [
   {
@@ -57,15 +57,15 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header collapse="condense" class="flex flex-col gap-3 px-6" :class="isIOS()?'status-bar': ''">
-      <ion-row class="mb-2">
+    <ion-header collapse="condense" class="flex flex-col gap-3 px-6 py-2" :class="isIOS()?'status-bar': ''">
+      <ion-row>
         <ion-col>
           <icon-x />
           <ion-text class="text-xl font-bold">Send to</ion-text>
         </ion-col>
-        <ion-col class="flex flex-row justify-end items-center gap-2">
+        <ion-col class="flex flex-row justify-end items-center gap-2 mt-4">
           <ion-text class="whitespace-nowrap font-bold text-sm">New beneficiery</ion-text>
-          <ion-button color="dark">
+          <ion-button color="dark" class="w-12 h-12">
             <icon-plus />
           </ion-button>
         </ion-col>
@@ -83,12 +83,18 @@ const isIOS = () => {
         <ion-col style="max-width: 17rem;">
           <ion-row class="uppercase">{{ item.title }}</ion-row>
           <ion-row class="items-center overflow-hidden gap-1 text-sm whitespace-nowrap flex-nowrap">
-            <span>{{ item.unit }}</span>
-            <icon-point-filled :size="8" />
-            <span>{{ item.type }}</span>
-            <icon-point-filled :size="8" />
+            <span class="uppercase">{{ item.unit }}</span>
+            <span class="text-2xl">
+              &middot;
+            </span>
+            <span class="uppercase">{{ item.type }}</span>
+            <span class="text-2xl">
+              &middot;
+            </span>
             <span>{{ item.from }}</span>
-            <icon-point-filled :size="8" />
+            <span class="text-2xl">
+              &middot;
+            </span>
             <span>{{ item.to }}</span>
           </ion-row>  
         </ion-col>
@@ -102,12 +108,18 @@ const isIOS = () => {
         <ion-col style="max-width: 17rem;">
           <ion-row class="uppercase">{{ item.title }}</ion-row>
           <ion-row class="items-center overflow-hidden gap-1 text-sm whitespace-nowrap flex-nowrap">
-            <span>{{ item.unit }}</span>
-            <icon-point-filled :size="8" />
-            <span>{{ item.type }}</span>
-            <icon-point-filled :size="8" />
+            <span class="uppercase">{{ item.unit }}</span>
+            <span class="text-2xl">
+              &middot;
+            </span>
+            <span class="uppercase">{{ item.type }}</span>
+            <span class="text-2xl">
+              &middot;
+            </span>
             <span>{{ item.from }}</span>
-            <icon-point-filled :size="8" />
+            <span class="text-2xl">
+              &middot;
+            </span>
             <span>{{ item.to }}</span>
           </ion-row>  
         </ion-col>
