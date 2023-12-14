@@ -57,14 +57,14 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header collapse="condense" class="flex flex-col gap-3 px-6 py-2" :class="isIOS()?'status-bar': ''">
+    <ion-header no-border collapse="condense" class="flex flex-col gap-3 px-6 py-2" :class="isIOS()?'status-bar': ''">
       <ion-row>
-        <ion-col>
+        <ion-col class="flex flex-col items-baseline justify-around">
           <icon-x />
           <ion-text class="text-xl font-bold">Send to</ion-text>
         </ion-col>
-        <ion-col class="flex flex-row justify-end items-center gap-2 mt-4">
-          <ion-text class="whitespace-nowrap font-bold text-sm">New beneficiery</ion-text>
+        <ion-col class="flex flex-row justify-end items-center gap-2 mt-6">
+          <ion-text class="whitespace-nowrap font-semibold text-sm">New beneficiery</ion-text>
           <ion-button color="dark" class="w-12 h-12">
             <icon-plus />
           </ion-button>
@@ -82,7 +82,7 @@ const isIOS = () => {
         </ion-avatar>
         <ion-col style="max-width: 17rem;">
           <ion-row class="uppercase">{{ item.title }}</ion-row>
-          <ion-row class="items-center overflow-hidden gap-1 text-sm whitespace-nowrap flex-nowrap">
+          <ion-row class="items-center overflow-auto gap-1 text-sm whitespace-nowrap flex-nowrap">
             <span class="uppercase">{{ item.unit }}</span>
             <span class="text-2xl">
               &middot;
@@ -107,7 +107,7 @@ const isIOS = () => {
         </ion-avatar>
         <ion-col style="max-width: 17rem;">
           <ion-row class="uppercase">{{ item.title }}</ion-row>
-          <ion-row class="items-center overflow-hidden gap-1 text-sm whitespace-nowrap flex-nowrap">
+          <ion-row class="items-center overflow-auto gap-1 text-sm whitespace-nowrap flex-nowrap">
             <span class="uppercase">{{ item.unit }}</span>
             <span class="text-2xl">
               &middot;

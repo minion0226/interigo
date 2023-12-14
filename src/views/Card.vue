@@ -17,10 +17,10 @@ const isIOS = () => {
     </ion-header>
     <ion-content fullscreen>
       <ion-col class="flex flex-col justify-center h-full">
-        <ion-text class="text-center text-lg font-bold mb-2">No cards</ion-text>
-        <ion-text class="text-center">Please contact your company</ion-text>
-        <ion-text class="text-center">Administrator to reqeust a card.</ion-text>
-        <ion-row class="justify-center">
+        <ion-text class="text-center text-lg font-medium mb-2">No cards</ion-text>
+        <ion-text class="text-sm text-center">Please contact your company</ion-text>
+        <ion-text class="text-sm text-center">Administrator to reqeust a card.</ion-text>
+        <ion-row class="justify-center mt-2">
           <ion-button class="w-12 h-12" color="dark">
             <icon-refresh :size="32" />
           </ion-button>

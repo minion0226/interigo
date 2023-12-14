@@ -1,42 +1,42 @@
 <script setup lang="ts">
 import { IonPage, IonHeader, IonCol, IonRow, IonText, IonButton, IonToolbar, IonTitle, IonContent, IonAvatar } from '@ionic/vue'
-import { IconArrowRight, IconArrowLeft, IconPointFilled, IconArrowUpRight, IconInfoCircle } from '@tabler/icons-vue'
+import { IconArrowRight, IconArrowLeft, IconArrowUpRight, IconInfoCircle } from '@tabler/icons-vue'
 
 const tempData = [
   {
     date: '05 Dec 2023',
     type: 'income',
-    title: 'Greenhill Advisor Ignitor',
-    status: 'successful',
+    title: 'Greenhill Advisor ikr',
+    status: 'Successful',
     duration: '15:30',
-    amount: '15000',
+    amount: '15,000.00',
     unit: 'EUR'
   },
   {
     date: '01 Dec 2023',
     type: 'income',
     title: 'interigo',
-    status: 'successful',
+    status: 'Successful',
     duration: '02:00',
-    amount: '29',
+    amount: '29.00',
     unit: 'EUR'
   },
   {
     date: '20 Nov 2023',
     type: 'income',
     title: 'interigo',
-    status: 'successful',
+    status: 'Successful',
     duration: '07:05',
-    amount: '40000',
+    amount: '40,000.00',
     unit: 'EUR'
   },
   {
     date: '09 Nov 2023',
     type: 'income',
-    title: 'Greenhill Advisor Ignitor',
-    status: 'successful',
+    title: 'Greenhill Advisor ikr',
+    status: 'Successful',
     duration: '12:42',
-    amount: '3500',
+    amount: '3,500',
     unit: 'EUR'
   },
 ]
@@ -49,28 +49,28 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header collapse="condense" class="flex flex-col gap-3 py-2" :class="isIOS()?'status-bar': ''">
+    <ion-header no-border collapse="condense" class="flex flex-col gap-3 py-2" :class="isIOS()?'status-bar': ''">
       <ion-toolbar>
         <ion-title class="px-8 text-start text-2xl">Accounts</ion-title>
       </ion-toolbar>
-      <ion-row class="justify-center items-center gap-2 font-bold">
-        <ion-avatar class="w-6 h-6">
+      <ion-row class="justify-center items-center font-bold">
+        <ion-avatar class="w-6 h-6 mr-2">
           <img src="@/assets/imgs/union.png" />
         </ion-avatar>
         <ion-text>EUR SEPA Account</ion-text>
       </ion-row>
-      <ion-row class="justify-center items-center gap-2 font-bold">
-        <ion-text class="text-2xl"> 333,333.43 EUR</ion-text>
+      <ion-row class="justify-center items-center gap-2 font-semibold">
+        <ion-text class="text-2xl">33,373.43 EUR</ion-text>
       </ion-row>
-      <ion-row class="justify-center gap-2 mt-4">
-        <ion-row class="flex-col">
-          <ion-button color="light" shape="round">
-            <icon-arrow-up-right :size="24" />
+      <ion-row class="justify-center mt-4">
+        <ion-row class="flex-col mr-2">
+          <ion-button class="w-12 h-12" color="light" shape="round">
+            <icon-arrow-up-right />
           </ion-button>
           <span class="text-sm text-center">Send</span>
         </ion-row>
         <ion-row class="flex-col">
-          <ion-button color="light" shape="round">
+          <ion-button class="w-12 h-12" color="light" shape="round">
             <icon-info-circle />
           </ion-button>
           <span class="text-sm text-center">Details</span>
@@ -79,17 +79,19 @@ const isIOS = () => {
     </ion-header>
     <ion-content>
       <ion-row v-for="(data, index) in tempData" :key="index" class="flex-col px-3 border-b py-2">
-        <ion-row class="mb-3 text-sm font-semibold">{{ data.date }}</ion-row>
+        <ion-row class="mb-3 text-sm font-medium">{{ data.date }}</ion-row>
         <ion-row class="items-center">
           <ion-avatar class="flex justify-center items-center bg-gray-200 w-8 h-8">
             <icon-arrow-right v-if="data.type==='income'" :size="16" />
             <icon-arrow-left v-else :size="16" />
           </ion-avatar>
           <ion-col>
-            <ion-row class="uppercase">{{ data.title }}</ion-row>
+            <ion-row class="uppercase title">{{ data.title }}</ion-row>
             <ion-row class="items-center">
               <span class="text-sm">{{ data.status }}</span>
-              <icon-point-filled :size="8" />
+              <span class="text-2xl mx-1">
+                &middot;
+              </span>              
               <span class="text-sm">{{ data.duration }}</span>
             </ion-row>
           </ion-col>
@@ -105,9 +107,12 @@ const isIOS = () => {
 
 <style scoped>
 ion-button {
-  --padding-start: 1rem;
-  --padding-top: 1rem;
-  --padding-bottom: 1rem;
-  --padding-end: 1rem;
+  --padding-start: 0.25rem;
+  --padding-top: 0.25rem;
+  --padding-bottom: 0.25rem;
+  --padding-end: 0.25rem;
+}
+.title {
+  max-width: 50vw;
 }
 </style>

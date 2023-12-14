@@ -1,25 +1,30 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import { IonPage, IonButton, IonText, IonRow, IonCol, IonInput } from '@ionic/vue'
-import { IconFaceId, IconEyeOff } from '@tabler/icons-vue'
+import { IconFaceId, IconEyeOff, IconEye } from '@tabler/icons-vue'
 import { useIonRouter } from '@ionic/vue'
 
 const ionRouter = useIonRouter()
+
+const passView = ref(false)
+
 </script>
 
 <template>
   <ion-page class="p-4">
     <ion-col class="flex flex-row justify-center gap-2 text-4xl font-bold items-end">
       <img src="@/assets/imgs/logo.jpg" class="w-12 h-12" />
-      <ion-text class="mb-2">integiro</ion-text>
+      <ion-text class="mb-2">intergiro</ion-text>
     </ion-col>
     <ion-row class="justify-center text-gray-400">antomarkop@gmail.com</ion-row>
     <ion-row class="flex-row mt-24 mb-16 gap-3 items-center">
-      <ion-input class="flex-1 rounded-md bg-gray-100 custom align-middle">
-        <icon-eye-off class="absolute right-4 top-5 z-10 text-gray-400 active:opacity-40" />
+      <ion-input placeholder="Password" :type="passView ? 'text':'password'" class="flex-1 rounded-md bg-gray-100 custom align-middle">
+        <icon-eye-off v-if="passView" @click="passView = false" class="absolute right-4 top-5 z-10 text-gray-400 active:opacity-40" />
+        <icon-eye v-else @click="passView = true" class="absolute right-4 top-5 z-10 text-gray-400 active:opacity-40" />
       </ion-input>
-      <icon-face-id :size="36" class="text-gray-500" />
+      <icon-face-id :size="36" class="text-gray-500 active:opacity-50 active:scale-95" />
     </ion-row>
-    <ion-row class="flex flex-col">
+    <ion-row class="flex flex-col mb-4">
       <ion-button expand="full" fill="clear" color="dark">Reset Password</ion-button>
       <ion-button @click="ionRouter.push('/tabs')" expand="full" shape="round" color="dark">Log in</ion-button>
     </ion-row>
