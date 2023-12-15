@@ -57,42 +57,42 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header no-border collapse="condense" class="flex flex-col gap-3 px-6 py-2" :class="isIOS()?'status-bar': ''">
+    <ion-header collapse="condense" class="flex flex-col px-6 py-2 ion-no-border" :class="isIOS()?'status-bar': ''">
       <ion-row>
         <ion-col class="flex flex-col items-baseline justify-around">
-          <icon-x />
+          <icon-x class="active:opacity-60 active:scale-90" />
           <ion-text class="text-xl font-bold">Send to</ion-text>
         </ion-col>
-        <ion-col class="flex flex-row justify-end items-center gap-2 mt-6">
-          <ion-text class="whitespace-nowrap font-semibold text-sm">New beneficiery</ion-text>
+        <ion-col class="flex flex-row justify-end items-center mt-6">
+          <ion-text class="whitespace-nowrap font-semibold text-sm mr-2">New beneficiery</ion-text>
           <ion-button color="dark" class="w-12 h-12">
             <icon-plus />
           </ion-button>
         </ion-col>
       </ion-row>
-      <ion-input placeholder="Search beneficiery" class="flex-1 rounded-md bg-gray-100 custom align-middle">
+      <ion-input placeholder="Search beneficiery" class="flex-1 rounded-md bg-gray-100 my-2 custom align-middle">
         <icon-search class="absolute right-4 top-5 z-10 text-gray-400 active:opacity-40" />
       </ion-input>
     </ion-header>
     <ion-content>
       <ion-row class="px-6 py-3">Recent</ion-row>
-      <ion-row v-for="(item, index) in recent" :key="index" class="px-6 py-2 gap-2 items-center border-b">
-        <ion-avatar class="w-8 h-8">
+      <ion-row v-for="(item, index) in recent" :key="index" class="px-6 py-2 items-center border-b">
+        <ion-avatar class="w-8 h-8 mr-2">
           <img v-if="item.unit === 'eur'" src="@/assets/imgs/union.png" />
         </ion-avatar>
         <ion-col style="max-width: 17rem;">
           <ion-row class="uppercase">{{ item.title }}</ion-row>
-          <ion-row class="items-center overflow-auto gap-1 text-sm whitespace-nowrap flex-nowrap">
+          <ion-row class="items-center overflow-auto text-sm whitespace-nowrap flex-nowrap">
             <span class="uppercase">{{ item.unit }}</span>
-            <span class="text-2xl">
+            <span class="text-2xl mx-1">
               &middot;
             </span>
             <span class="uppercase">{{ item.type }}</span>
-            <span class="text-2xl">
+            <span class="text-2xl mx-1">
               &middot;
             </span>
             <span>{{ item.from }}</span>
-            <span class="text-2xl">
+            <span class="text-2xl mx-1">
               &middot;
             </span>
             <span>{{ item.to }}</span>
@@ -101,23 +101,23 @@ const isIOS = () => {
       </ion-row>
 
       <ion-row class="px-6 py-3">All beneficieries</ion-row>
-      <ion-row v-for="(item, index) in all" :key="index" class="px-6 py-2 gap-2 items-center border-b">
-        <ion-avatar class="w-8 h-8">
+      <ion-row v-for="(item, index) in all" :key="index" class="px-6 py-2 items-center border-b">
+        <ion-avatar class="w-8 h-8 mr-2">
           <img v-if="item.unit === 'eur'" src="@/assets/imgs/union.png" />
         </ion-avatar>
         <ion-col style="max-width: 17rem;">
           <ion-row class="uppercase">{{ item.title }}</ion-row>
-          <ion-row class="items-center overflow-auto gap-1 text-sm whitespace-nowrap flex-nowrap">
+          <ion-row class="items-center overflow-auto text-sm whitespace-nowrap flex-nowrap">
             <span class="uppercase">{{ item.unit }}</span>
-            <span class="text-2xl">
+            <span class="text-2xl mx-1">
               &middot;
             </span>
             <span class="uppercase">{{ item.type }}</span>
-            <span class="text-2xl">
+            <span class="text-2xl mx-1">
               &middot;
             </span>
             <span>{{ item.from }}</span>
-            <span class="text-2xl">
+            <span class="text-2xl mx-1">
               &middot;
             </span>
             <span>{{ item.to }}</span>

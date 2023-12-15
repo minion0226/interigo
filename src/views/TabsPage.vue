@@ -7,7 +7,7 @@ import { IconStackFront, IconCreditCardFilled, IconCircleArrowUpRightFilled, Ico
   <ion-page>
     <ion-tabs>
       <ion-router-outlet :animated="false" ></ion-router-outlet>
-      <ion-tab-bar slot="bottom" class="p-2">
+      <ion-tab-bar slot="bottom" class="p-2 pb-4">
         <ion-tab-button tab="accounts" href="/tabs/account">
           <icon-stack-front class="rotate" />
           <ion-label>Accounts</ion-label>

@@ -14,43 +14,43 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header collapse="condense" no-border class="flex flex-col gap-3 py-2" :class="isIOS()?'status-bar': ''">
+    <ion-header collapse="condense" class="flex flex-col py-2 ion-no-border" :class="isIOS()?'status-bar': ''">
       <ion-toolbar>
         <ion-title class="px-8 text-start text-2xl">More</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-col class="flex flex-row px-6 border-b py-4 gap-2 active:text-blue-500">
+        <ion-col class="flex flex-row px-6 border-b py-4 active:text-blue-500">
           <icon-lock />
-          <ion-text class="flex-grow"> Security and data</ion-text>
+          <ion-text class="flex-grow mx-2"> Security and data</ion-text>
           <icon-chevron-right />
         </ion-col>
-        <ion-col class="flex flex-row px-6 border-b py-4 gap-2 active:text-blue-500">
+        <ion-col class="flex flex-row px-6 border-b py-4 active:text-blue-500">
           <icon-bell-filled />
-          <ion-text class="flex-grow">Notifications</ion-text>
+          <ion-text class="flex-grow mx-2">Notifications</ion-text>
           <icon-chevron-right />
         </ion-col>
-        <ion-col class="flex flex-row px-6 border-b py-4 gap-2 active:text-blue-500">
+        <ion-col class="flex flex-row px-6 border-b py-4 active:text-blue-500">
           <icon-circles-relation />
-          <ion-text class="flex-grow">3D Secure</ion-text>
+          <ion-text class="flex-grow mx-2">3D Secure</ion-text>
           <icon-chevron-right />
         </ion-col>
-        <ion-col class="flex flex-row px-6 border-b py-4 gap-2 active:text-blue-500">
+        <ion-col class="flex flex-row px-6 border-b py-4 active:text-blue-500">
           <ion-row class="relative">
             <icon-brand-hipchat />
             <ion-badge>1</ion-badge>
           </ion-row>
-          <ion-text class="flex-grow">Chat</ion-text>
+          <ion-text class="flex-grow mx-2">Chat</ion-text>
         </ion-col>
-        <ion-col class="flex flex-row px-6 border-b py-4 gap-2 active:text-blue-500">
+        <ion-col class="flex flex-row px-6 border-b py-4 active:text-blue-500">
           <icon-info-circle-filled />
-          <ion-text class="flex-grow">About</ion-text>
+          <ion-text class="flex-grow mx-2">About</ion-text>
           <icon-chevron-right />
         </ion-col>
-        <ion-col @click="ionRouter.push('/login')" class="flex flex-row px-6 border-b py-4 gap-2 active:text-blue-500">
+        <ion-col @click="ionRouter.push('/login')" class="flex flex-row px-6 border-b py-4 active:text-blue-500">
           <icon-circle-arrow-right-filled />
-          <ion-text class="flex-grow">Log out</ion-text>
+          <ion-text class="flex-grow mx-2">Log out</ion-text>
         </ion-col>
       </ion-list>
     </ion-content>

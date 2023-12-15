@@ -9,7 +9,7 @@ const isIOS = () => {
 
 <template>
   <ion-page>
-    <ion-header no-border collapse="condense" class="flex flex-col gap-3 py-2" :class="isIOS()?'status-bar': ''">
+    <ion-header collapse="condense" class="flex flex-col py-2 ion-no-border" :class="isIOS()?'status-bar': ''">
       <ion-toolbar>
         <ion-title class="px-8 text-start text-2xl">Activity</ion-title>
       </ion-toolbar>
