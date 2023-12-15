@@ -85,13 +85,13 @@ const isIOS = () => {
             <icon-arrow-right v-if="data.type==='income'" :size="16" />
             <icon-arrow-left v-else :size="16" />
           </ion-avatar>
-          <ion-col>
-            <ion-row class="uppercase whitespace-nowrap flex-nowrap overflow-auto">{{ data.title }}</ion-row>
-            <ion-row class="items-center">
+          <ion-col class="flex flex-col whitespace-nowrap flex-nowrap overflow-auto">
+            <ion-row class="uppercase">{{ data.title }}</ion-row>
+            <ion-row class="items-center flex-nowrap">
               <span class="text-sm">{{ data.status }}</span>
               <span class="text-2xl mx-1">
                 &middot;
-              </span>              
+              </span>
               <span class="text-sm">{{ data.duration }}</span>
             </ion-row>
           </ion-col>

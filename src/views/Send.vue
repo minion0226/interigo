@@ -80,9 +80,9 @@ const isIOS = () => {
         <ion-avatar class="w-8 h-8 mr-2">
           <img v-if="item.unit === 'eur'" src="@/assets/imgs/union.png" />
         </ion-avatar>
-        <ion-col style="max-width: 17rem;">
-          <ion-row class="uppercase">{{ item.title }}</ion-row>
-          <ion-row class="items-center overflow-auto text-sm whitespace-nowrap flex-nowrap">
+        <ion-col class="overflow-auto whitespace-nowrap flex-nowrap">
+          <ion-row class="uppercase flex-nowrap">{{ item.title }}</ion-row>
+          <ion-row class="items-center text-sm flex-nowrap">
             <span class="uppercase">{{ item.unit }}</span>
             <span class="text-2xl mx-1">
               &middot;
@@ -105,9 +105,9 @@ const isIOS = () => {
         <ion-avatar class="w-8 h-8 mr-2">
           <img v-if="item.unit === 'eur'" src="@/assets/imgs/union.png" />
         </ion-avatar>
-        <ion-col style="max-width: 17rem;">
-          <ion-row class="uppercase">{{ item.title }}</ion-row>
-          <ion-row class="items-center overflow-auto text-sm whitespace-nowrap flex-nowrap">
+        <ion-col class="overflow-auto whitespace-nowrap flex-nowrap">
+          <ion-row class="uppercase flex-nowrap">{{ item.title }}</ion-row>
+          <ion-row class="items-center text-sm flex-nowrap">
             <span class="uppercase">{{ item.unit }}</span>
             <span class="text-2xl mx-1">
               &middot;
