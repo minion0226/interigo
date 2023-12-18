@@ -1,45 +1,7 @@
 <script setup lang="ts">
 import { IonPage, IonHeader, IonCol, IonRow, IonText, IonButton, IonToolbar, IonTitle, IonContent, IonAvatar } from '@ionic/vue'
 import { IconArrowRight, IconArrowLeft, IconArrowUpRight, IconInfoCircle } from '@tabler/icons-vue'
-
-const tempData = [
-  {
-    date: '05 Dec 2023',
-    type: 'income',
-    title: 'Greenhill Advisor ikr',
-    status: 'Successful',
-    duration: '15:30',
-    amount: '15,000.00',
-    unit: 'EUR'
-  },
-  {
-    date: '01 Dec 2023',
-    type: 'income',
-    title: 'interigo',
-    status: 'Successful',
-    duration: '02:00',
-    amount: '29.00',
-    unit: 'EUR'
-  },
-  {
-    date: '20 Nov 2023',
-    type: 'income',
-    title: 'interigo',
-    status: 'Successful',
-    duration: '07:05',
-    amount: '40,000.00',
-    unit: 'EUR'
-  },
-  {
-    date: '09 Nov 2023',
-    type: 'income',
-    title: 'Greenhill Advisor ikr',
-    status: 'Successful',
-    duration: '12:42',
-    amount: '3,500',
-    unit: 'EUR'
-  },
-]
+import { tempData } from '@/mock/data'
 
 const isIOS = () => {
   const userAgent = window.navigator.userAgent.toLowerCase()
@@ -86,7 +48,7 @@ const isIOS = () => {
             <icon-arrow-left v-else :size="16" />
           </ion-avatar>
           <ion-col class="flex flex-col whitespace-nowrap flex-nowrap overflow-auto">
-            <ion-row class="uppercase">{{ data.title }}</ion-row>
+            <ion-row>{{ data.title }}</ion-row>
             <ion-row class="items-center flex-nowrap">
               <span class="text-sm">{{ data.status }}</span>
               <span class="text-2xl mx-1">
