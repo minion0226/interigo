@@ -6,21 +6,21 @@ const recent = [
   {
     type: 'sefa',
     unit: 'eur',
-    title: 'greenhill advisor ike',
+    title: 'GREENHILL ADVISORS IKE',
     from: 'GR54 0140 1460 0200 2027 358',
     to: 'CR40 2503 1232 0493 992'
   },
   {
     type: 'sefa',
     unit: 'eur',
-    title: 'prosperity single menber ike',
-    from: 'GR53 0140 1460 0200 2027 358',
-    to: 'CR40 2503 1232 0493 992'
+    title: 'TAX OFFICE MALTA',
+    from: 'MT84 MALT 0110 0001 2345',
+    to: 'MTLC AST0 01S'
   },
   {
     type: 'sefa',
     unit: 'eur',
-    title: 'callamus limited',
+    title: 'CALLAMUS LIMITED',
     from: 'SR54 0140 1460 0200 2027 358',
     to: 'CP40 2503 1232 0493 992'
   },
@@ -36,16 +36,9 @@ const all = [
   {
     type: 'sefa',
     unit: 'eur',
-    title: 'callamus limited',
+    title: 'CALLAMUS LIMITED',
     from: 'GR53 0140 1460 0200 2027 358',
     to: 'CR40 2503 1232 0493 992'
-  },
-  {
-    type: 'sefa',
-    unit: 'eur',
-    title: 'greenhill advisor ike',
-    from: 'SR54 0140 1460 0200 2027 358',
-    to: 'CP40 2503 1232 0493 992'
   },
 ]
 

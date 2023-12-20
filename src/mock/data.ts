@@ -95,7 +95,7 @@ export const tempData = [
     title: 'TAX OFFICE MALTA',
     status: 'Successful',
     duration: '14:08',
-    amount: '258,871.00',
+    amount: '258,871.86',
     unit: 'EUR'
   },
   {
