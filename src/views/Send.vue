@@ -6,13 +6,6 @@ const recent = [
   {
     type: 'sefa',
     unit: 'eur',
-    title: 'GREENHILL ADVISORS IKE',
-    from: 'GR54 0140 1460 0200 2027 358',
-    to: 'CR40 2503 1232 0493 992'
-  },
-  {
-    type: 'sefa',
-    unit: 'eur',
     title: 'TAX OFFICE MALTA',
     from: 'MT84 MALT 0110 0001 2345',
     to: 'MTLC AST0 01S'

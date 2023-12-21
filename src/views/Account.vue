@@ -22,7 +22,7 @@ const isIOS = () => {
         <ion-text>EUR SEPA Account</ion-text>
       </ion-row>
       <ion-row class="justify-center items-center font-semibold mt-3">
-        <ion-text class="text-2xl">33,373.43 EUR</ion-text>
+        <ion-text class="text-2xl">349,087.65 EUR</ion-text>
       </ion-row>
       <ion-row class="justify-center mt-4">
         <ion-row class="flex-col mr-2">
